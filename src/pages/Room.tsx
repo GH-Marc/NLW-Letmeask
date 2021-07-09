@@ -1,5 +1,5 @@
 import { useState, FormEvent } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 import { useAuth } from '../hooks/useAuth';
 import { useRoom } from '../hooks/useRoom';
@@ -67,7 +67,9 @@ export function Room() {
     <div id="page-room">
       <header>
         <div className="content">
-          <img src={logoImg} alt="Letmeask" />
+          <Link to="/">
+            <img src={logoImg} alt="Letmeask" />
+          </Link>
           <RoomCode code={roomId} />
         </div>
       </header>
@@ -92,7 +94,7 @@ export function Room() {
                 <span>{user.name}</span>
               </div>
             ): (
-              <span>Para enviar uma pergunta, <button>faça o seu login</button>.</span>
+              <span>Para enviar uma pergunta, <Link to="/">faça o seu login</Link>.</span>
             )}
             <Button type="submit" disabled={!user}>Enviar pergunta</Button>
           </div>
