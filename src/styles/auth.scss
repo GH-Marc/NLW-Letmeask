@@ -140,3 +140,31 @@
     }
   }
 }
+
+@media (max-width: 720px) {
+  #page-auth aside {
+    display: none;
+  }
+}
+
+@media (max-width: 812px) {
+  #page-auth aside {
+    padding: 100px 60px;
+
+    strong {
+      font-size: 32px;
+      line-height: 36px;
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 28px;
+    }
+  }
+
+  #page-auth .main-content {
+    button, input {
+      font-size: 14px;
+    }
+  }
+}
